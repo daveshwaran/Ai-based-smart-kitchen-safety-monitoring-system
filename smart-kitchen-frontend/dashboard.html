@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Kitchen Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>Smart Kitchen Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<div class="container">
+
+    <div class="status-card">
+        <h1 id="riskLevel">Loading...</h1>
+        <p id="alertMessage">Fetching latest status...</p>
+        <small>Last Updated: <span id="createdAt">--</span></small>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Gas Value</h3>
+            <p id="gasValue">--</p>
+        </div>
+
+        <div class="card">
+            <h3>Flame Status</h3>
+            <p id="flameValue">--</p>
+        </div>
+
+        <div class="card">
+            <h3>Temperature</h3>
+            <p id="temperature">--</p>
+        </div>
+
+        <div class="ai-card">
+            <h3>AI Safety Suggestion</h3>
+            <p id="aiSuggestion">Loading AI suggestion...</p>
+        </div>
+
+        <div class="card">
+            <h3>Current Value</h3>
+            <p id="currentValue">--</p>
+        </div>
+    </div>
+
+    <div class="charts">
+        <div class="chart-card">
+            <h3>Gas Level History</h3>
+            <canvas id="gasChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>Temperature History</h3>
+            <canvas id="tempChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>Current Sensor History</h3>
+            <canvas id="currentChart"></canvas>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
